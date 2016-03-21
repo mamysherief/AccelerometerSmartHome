@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Accelerometer Example</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="x_axis">x-axis: %f</string>
+    <string name="y_axis">y-axis: %f</string>
+    <string name="z_axis">z-axis: %f</string>
+</resources>
