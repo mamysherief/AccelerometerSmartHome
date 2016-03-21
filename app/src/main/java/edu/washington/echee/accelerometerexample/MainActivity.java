@@ -21,7 +21,7 @@ import java.io.*;
 import java.net.*;
 //import java.lang.Object;
 //import java.util.List;
-
+//edit from github
 
 public class MainActivity extends Activity implements SensorEventListener {
     private SensorManager mSensorManager;
