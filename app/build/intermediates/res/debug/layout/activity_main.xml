@@ -31,5 +31,13 @@
         android:textSize="30dp"
         android:text="@string/z_axis" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to equipments"
+        android:id="@+id/button8"
+        android:layout_gravity="right"
+        android:onClick="exitAccelerometer"/>
+
 </LinearLayout>
 <!-- From: file:/C:/Android/AndroidStudioProjects/AccelerometerSmartHome/app/src/main/res/layout/activity_main.xml -->

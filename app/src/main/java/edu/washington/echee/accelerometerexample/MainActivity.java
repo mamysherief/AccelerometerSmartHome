@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 //import android.view.View;
 //import android.widget.Button;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
@@ -186,6 +187,10 @@ public class MainActivity extends Activity implements SensorEventListener {
         );
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
+    }
+
+    public void exitAccelerometer(View view) {
+        finish();
     }
 
 

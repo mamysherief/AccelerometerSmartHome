@@ -2,11 +2,25 @@
 <items version="2" >
 
     <item
-        jar="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jar="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
-        <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\classes-a1378d0edc181dd3e1a2f5265b58da6cbad360c9.jar" />
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\classes-3da3cdeff99d5273886b09d3e30bf05636e72bb9.jar" />
+    </item>
+    <item
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.1-0cf3d10c35e3a85c12847a4ae04cc53252341eed.jar" />
+    </item>
+    <item
+        jar="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\classes-6530baf8f3d84e337a3d23768dc9daa3600668ee.jar" />
     </item>
     <item
         jar="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
@@ -16,32 +30,25 @@
         <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\classes-379d363d563a43dfaacd61e5ffb5e929f1ffb35b.jar" />
     </item>
     <item
-        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jar="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-70ba567356d3f4e70248bb87208265e9c5e15549.jar" />
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-c6471d1b364e08ae494d4e3fd4827e2fcda9e620.jar" />
     </item>
     <item
-        jar="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jar="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-69e062e8058699ce8d91b349139ecd7bd38d1c59.jar" />
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\classes-a38d3441ce6b5807a481446bf73cd8731aaa5997.jar" />
     </item>
     <item
-        jar="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jar="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
-        <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\classes-2a4327a9b7fbf5662f45e7d58a3fb2114a5a2cd0.jar" />
-    </item>
-    <item
-        jar="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\classes-6410b52e901f6d7a07a4f50976cce4ef93666dbe.jar" />
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="C:\Android\AndroidStudioProjects\AccelerometerSmartHome\app\build\intermediates\pre-dexed\debug\classes-a1378d0edc181dd3e1a2f5265b58da6cbad360c9.jar" />
     </item>
 
 </items>
