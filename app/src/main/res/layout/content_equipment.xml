@@ -32,7 +32,7 @@
         android:layout_marginTop="62dp"
         android:height="100dp"
         android:width="150dp"
-        android:onClick="switchLauncher"/>
+        android:onClick="switchLauncherFL"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
         android:layout_alignEnd="@+id/textView2"
         android:height="100dp"
         android:width="150dp"
-        android:onClick="ceilingLampLauncher"/>
+        android:onClick="switchLauncherCL"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
         android:layout_below="@+id/button4"
         android:layout_alignLeft="@+id/button4"
         android:layout_alignStart="@+id/button4"
-        android:onClick="switchLauncher"/>
+        android:onClick="switchLauncherCR"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -69,7 +69,7 @@
         android:layout_alignEnd="@+id/button5"
         android:height="100dp"
         android:width="150dp"
-        android:onClick="switchLauncher"/>
+        android:onClick="switchLauncherFN"/>
 
     <Button
         android:layout_width="wrap_content"

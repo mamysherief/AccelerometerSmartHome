@@ -8,6 +8,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 //import android.view.View;
 //import android.widget.Button;
@@ -29,6 +30,12 @@ public class MainActivity extends Activity implements SensorEventListener {
     private Sensor mAccelerometer;
     private static final String TAG = MainActivity.class.getSimpleName();
 
+    //declaring the global variable and assigning them
+    gcshGlobal globals = gcshGlobal.getInstance();
+    private String room = globals.getRoom();
+    private String equipment = globals.getEquipment();
+    //Vibrator vibrator = (Vibrator) getSystemService(this.VIBRATOR_SERVICE);
+
     public Socket socket;
     //DataOutputStream outToServer = null;
     //Button buttonConnect;
@@ -47,6 +54,10 @@ public class MainActivity extends Activity implements SensorEventListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //cmd
+        TextView cmd = (TextView) findViewById(R.id.cmdString);
+        cmd.setText("A1" + ":" + room + ":" + equipment);
 
         tcpThread = new Thread(new ClientThread());
         tcpThread.start();
@@ -84,36 +95,95 @@ public class MainActivity extends Activity implements SensorEventListener {
         tvYAxis.setText(getString(R.string.y_axis, yvalue));
         tvZAxis.setText(getString(R.string.z_axis, zvalue));
 
+
+        // previously ...
+//        try {
+//            if ((zvalue <= 7.1 && zvalue >= 6.5) && (yvalue <= 7.1 && yvalue >= 6.5))
+//                //dataOutputStream.writeUTF("A1" + "\n");
+//                Log.i(TAG, "room =" + room + equipment);
+//                dataOutputStream.writeUTF(room + "\n");
+//                //dataOutputStream.writeUTF("A1" + ":" + room + ":" + equipment + ":" + "1" + "\n");
+//                //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        try {
+//            if ((zvalue <= 7.1 && zvalue >= 6.5) && (yvalue <= -6.5 && yvalue >= -7.1))
+//                dataOutputStream.writeUTF("A2" + "\n");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+
         try {
-            if ((zvalue <= 7.1 && zvalue >= 6.5) && (yvalue <= 7.1 && yvalue >= 6.5))
-                dataOutputStream.writeUTF("A1" + "\n");
+            //while (true) {
+            if ((zvalue <= 7.1 && zvalue >= 6.5) && (yvalue <= 7.1 && yvalue >= 6.5)) {
                 //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            if ((zvalue <= 7.1 && zvalue >= 6.5) && (yvalue <= -6.5 && yvalue >= -7.1))
-                dataOutputStream.writeUTF("A2" + "\n");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-/*
-        try {
-            if (zvalue <= 8.1 && yvalue <= 8.1) {
-                //dataOutputStream.writeInt("A " + X + " " + Y + " " + Z);
-                dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z +"#");
+                dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "1" + "\n"); //Mobile tilt up
+                //vibrator.vibrate(100);
+                //System.out.print("Mobile tilt strait up");
                 //dataOutputStream.writeUTF("X value is " + X);
-                //dataOutputStream.writeUTF("Y value is " + Y);
-                //dataOutputStream.writeUTF("Z value is " + Z);
-               // client.disconnect();
-
-            }
-
+                //client.disconnect();
+            }//FF 01 03 'l' FF FF FF FE
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
-    }
+        }
+
+        try {
+            if ((zvalue <= 7.1 && zvalue >= 6.5) && (yvalue <= -6.5 && yvalue >= -7.1)) {
+                dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "2" + "\n"); //Mobile tilt down
+                //vibrator.vibrate(100);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            if ((zvalue <= 7.1 && zvalue >= 6.5) && (xvalue <= 7.1 && xvalue >= 6.5)) {
+                //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
+                dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "3" + "\n"); //Mobile tilt left
+                //vibrator.vibrate(100);
+            }
+            //System.out.print("Mobile tilt left");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            if ((xvalue <= -6.5 && xvalue >= -7.1) && (zvalue <= 7.1 &&zvalue >= 6.5)) {
+                //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
+                dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "4" + "\n"); //Mobile tilt right
+                //vibrator.vibrate(100);
+            }
+            //System.out.print("Mobile tilt right");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            if ((xvalue <= 7.1 && xvalue >= 6.5) && (yvalue <= 7.1 && yvalue >= 6.5)) {
+                //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
+                dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "5" + "\n"); //Mobile tilt left vertically
+                //vibrator.vibrate(100);
+            }
+            //System.out.print("Mobile tilt right");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            if ((xvalue <= -6.5 && xvalue >= -7.1) && (yvalue <= 7.1 && yvalue >= 6.5)) {
+                //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
+                dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "6" + "\n"); //Mobile tilt right vertically
+                //vibrator.vibrate(100);
+            }
+            //System.out.print("Mobile tilt right");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+}
+
 
 
     @Override
@@ -143,8 +213,9 @@ public class MainActivity extends Activity implements SensorEventListener {
     public void connect() {
 
         try {
-            //socket = new Socket("194.47.46.100", 4444);   // my IP
-            socket = new Socket("194.47.40.69", 4444);     // pearsons IP
+            //socket = new Socket("194.47.32.65", 4444);   // my IP
+            socket = new Socket("194.47.41.122", 4444);   // Marijana
+            //socket = new Socket("194.47.40.69", 4444);     // pearsons IP
 
             dataOutputStream = new DataOutputStream(socket.getOutputStream());
             dataInputStream = new DataInputStream(socket.getInputStream());

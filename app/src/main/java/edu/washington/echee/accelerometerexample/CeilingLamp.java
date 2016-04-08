@@ -10,6 +10,9 @@ import android.view.View;
 
 public class CeilingLamp extends AppCompatActivity {
 
+    //declaring the global variable
+    gcshGlobal globals = gcshGlobal.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,13 +30,38 @@ public class CeilingLamp extends AppCompatActivity {
 //        });
     }
 
-    public void exitCeilingLamp(View view) {
-        finish();
-    }
-
-    public void switchLauncher(View view) {
+    public void switchLauncherCL01(View view) {
+        globals.setEquipment("CL");
         Intent switchIntent = new Intent(this, MainActivity.class);
         startActivity(switchIntent);
         // pass a variable here
+    }
+    public void switchLauncherCL02(View view) {
+        globals.setEquipment("CL");
+        Intent switchIntent = new Intent(this, MainActivity.class);
+        startActivity(switchIntent);
+        // pass a variable here
+    }
+    public void switchLauncherCL03(View view) {
+        globals.setEquipment("CL");
+        Intent switchIntent = new Intent(this, MainActivity.class);
+        startActivity(switchIntent);
+        // pass a variable here
+    }
+    public void switchLauncherCL04(View view) {
+        globals.setEquipment("CL");
+        Intent switchIntent = new Intent(this, MainActivity.class);
+        startActivity(switchIntent);
+        // pass a variable here
+    }
+    public void switchLauncherCLALL(View view) {
+        globals.setEquipment("CL");
+        Intent switchIntent = new Intent(this, MainActivity.class);
+        startActivity(switchIntent);
+        // pass a variable here
+    }
+
+    public void exitCeilingLamp(View view) {
+        finish();
     }
 }

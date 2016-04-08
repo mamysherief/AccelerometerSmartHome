@@ -11,6 +11,9 @@ import android.view.View;
 
 public class Rooms extends AppCompatActivity {
 
+    //declaring the global variable
+    gcshGlobal globals = gcshGlobal.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +35,23 @@ public class Rooms extends AppCompatActivity {
 
     }
     /** Called when the user clicks Room 01 button */
-    public void equipmentLauncher(View view){
+    public void equipmentLauncher01(View view){
+        globals.setRoom("R1");
+        Intent equipmentIntent = new Intent(this, Equipment.class);
+        startActivity(equipmentIntent);
+        // pass a variable here
+    }
+
+/** Called when the user clicks Room 02 button */
+    public void equipmentLauncher02(View view){
+        globals.setRoom("R2");
+        Intent equipmentIntent = new Intent(this, Equipment.class);
+        startActivity(equipmentIntent);
+        // pass a variable here
+    }
+/** Called when the user clicks Room 03 button */
+    public void equipmentLauncher03(View view){
+        globals.setRoom("R3");
         Intent equipmentIntent = new Intent(this, Equipment.class);
         startActivity(equipmentIntent);
         // pass a variable here
@@ -42,3 +61,4 @@ public class Rooms extends AppCompatActivity {
         System.exit(0);
     }
 }
+

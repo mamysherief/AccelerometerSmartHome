@@ -22,7 +22,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="73dp"
-        android:onClick="switchLauncher"/>
+        android:onClick="switchLauncherCL01"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -35,7 +35,7 @@
         android:layout_toStartOf="@+id/button13"
         android:layout_marginRight="42dp"
         android:layout_marginEnd="42dp"
-        android:onClick="switchLauncher"/>
+        android:onClick="switchLauncherCL02"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -43,12 +43,12 @@
         android:layout_height="wrap_content"
         android:text="03"
         android:id="@+id/button13"
-        android:onClick="switchLauncher"
         android:layout_above="@+id/button15"
         android:layout_alignLeft="@+id/button16"
         android:layout_alignStart="@+id/button16"
         android:layout_marginLeft="31dp"
-        android:layout_marginStart="31dp" />
+        android:layout_marginStart="31dp"
+        android:onClick="switchLauncherCL03"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -59,7 +59,7 @@
         android:layout_above="@+id/button15"
         android:layout_alignRight="@+id/textView4"
         android:layout_alignEnd="@+id/textView4"
-        android:onClick="switchLauncher"/>
+        android:onClick="switchLauncherCL04"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -70,9 +70,9 @@
         android:layout_alignLeft="@+id/button12"
         android:layout_alignStart="@+id/button12"
         android:layout_marginTop="60dp"
-        android:onClick="switchLauncher"
         android:layout_alignRight="@+id/button13"
-        android:layout_alignEnd="@+id/button13" />
+        android:layout_alignEnd="@+id/button13"
+        android:onClick="switchLauncherCLALL"/>
 
     <Button
         android:layout_width="wrap_content"
