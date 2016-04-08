@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.washington.echee.accelerometerexample.CeilingLamp"
+    tools:showIn="@layout/activity_ceiling_lamp">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01"
+        android:id="@+id/button11"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="73dp"
+        android:onClick="switchLauncherCL01"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="02"
+        android:id="@+id/button12"
+        android:layout_alignTop="@+id/button11"
+        android:layout_toLeftOf="@+id/button13"
+        android:layout_toStartOf="@+id/button13"
+        android:layout_marginRight="42dp"
+        android:layout_marginEnd="42dp"
+        android:onClick="switchLauncherCL02"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03"
+        android:id="@+id/button13"
+        android:layout_above="@+id/button15"
+        android:layout_alignLeft="@+id/button16"
+        android:layout_alignStart="@+id/button16"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:onClick="switchLauncherCL03"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="04"
+        android:id="@+id/button14"
+        android:layout_above="@+id/button15"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4"
+        android:onClick="switchLauncherCL04"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Bulbs"
+        android:id="@+id/button15"
+        android:layout_below="@+id/button12"
+        android:layout_alignLeft="@+id/button12"
+        android:layout_alignStart="@+id/button12"
+        android:layout_marginTop="60dp"
+        android:layout_alignRight="@+id/button13"
+        android:layout_alignEnd="@+id/button13"
+        android:onClick="switchLauncherCLALL"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Equipment"
+        android:id="@+id/button16"
+        android:layout_below="@+id/button15"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="97dp"
+        android:onClick="exitCeilingLamp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Choose the bulb you want to turn on"
+        android:id="@+id/textView4"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
+<!-- From: file:/C:/Android/AndroidStudioProjects/AccelerometerSmartHome/app/src/main/res/layout/content_ceiling_lamp.xml -->
