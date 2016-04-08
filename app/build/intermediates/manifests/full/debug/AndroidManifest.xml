@@ -18,7 +18,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="edu.washington.echee.accelerometerexample.MainActivity"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
         <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,6 +43,7 @@
         <activity
             android:name="edu.washington.echee.accelerometerexample.Rooms"
             android:label="@string/title_activity_rooms"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,10 +54,12 @@
         <activity
             android:name="edu.washington.echee.accelerometerexample.Equipment"
             android:label="@string/title_activity_equipment"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="edu.washington.echee.accelerometerexample.CeilingLamp"
             android:label="@string/title_activity_ceiling_lamp"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

@@ -95,7 +95,7 @@ public class MainActivity extends Activity implements SensorEventListener {
         tvYAxis.setText(getString(R.string.y_axis, yvalue));
         tvZAxis.setText(getString(R.string.z_axis, zvalue));
 
-
+        Vibrator vibrator = (Vibrator) getSystemService(this.VIBRATOR_SERVICE);
         // previously ...
 //        try {
 //            if ((zvalue <= 7.1 && zvalue >= 6.5) && (yvalue <= 7.1 && yvalue >= 6.5))
@@ -119,8 +119,8 @@ public class MainActivity extends Activity implements SensorEventListener {
             //while (true) {
             if ((zvalue <= 7.1 && zvalue >= 6.5) && (yvalue <= 7.1 && yvalue >= 6.5)) {
                 //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
+                vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "1" + "\n"); //Mobile tilt up
-                //vibrator.vibrate(100);
                 //System.out.print("Mobile tilt strait up");
                 //dataOutputStream.writeUTF("X value is " + X);
                 //client.disconnect();
@@ -131,8 +131,9 @@ public class MainActivity extends Activity implements SensorEventListener {
 
         try {
             if ((zvalue <= 7.1 && zvalue >= 6.5) && (yvalue <= -6.5 && yvalue >= -7.1)) {
+                vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "2" + "\n"); //Mobile tilt down
-                //vibrator.vibrate(100);
+
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -141,8 +142,8 @@ public class MainActivity extends Activity implements SensorEventListener {
         try {
             if ((zvalue <= 7.1 && zvalue >= 6.5) && (xvalue <= 7.1 && xvalue >= 6.5)) {
                 //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
+                vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "3" + "\n"); //Mobile tilt left
-                //vibrator.vibrate(100);
             }
             //System.out.print("Mobile tilt left");
         } catch (IOException e) {
@@ -152,8 +153,8 @@ public class MainActivity extends Activity implements SensorEventListener {
         try {
             if ((xvalue <= -6.5 && xvalue >= -7.1) && (zvalue <= 7.1 &&zvalue >= 6.5)) {
                 //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
+                vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "4" + "\n"); //Mobile tilt right
-                //vibrator.vibrate(100);
             }
             //System.out.print("Mobile tilt right");
         } catch (IOException e) {
@@ -163,8 +164,8 @@ public class MainActivity extends Activity implements SensorEventListener {
         try {
             if ((xvalue <= 7.1 && xvalue >= 6.5) && (yvalue <= 7.1 && yvalue >= 6.5)) {
                 //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
+                vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "5" + "\n"); //Mobile tilt left vertically
-                //vibrator.vibrate(100);
             }
             //System.out.print("Mobile tilt right");
         } catch (IOException e) {
@@ -174,8 +175,8 @@ public class MainActivity extends Activity implements SensorEventListener {
         try {
             if ((xvalue <= -6.5 && xvalue >= -7.1) && (yvalue <= 7.1 && yvalue >= 6.5)) {
                 //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
+                vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "6" + "\n"); //Mobile tilt right vertically
-                //vibrator.vibrate(100);
             }
             //System.out.print("Mobile tilt right");
         } catch (IOException e) {
