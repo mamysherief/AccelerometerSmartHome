@@ -9,4 +9,5 @@
     <string name="title_activity_rooms">Rooms</string>
     <string name="title_activity_equipment">Equipment</string>
     <string name="title_activity_ceiling_lamp">CeilingLamp</string>
+    <string name="title_activity_intro">Intro</string>
 </resources>

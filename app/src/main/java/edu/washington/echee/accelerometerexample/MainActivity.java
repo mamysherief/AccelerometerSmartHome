@@ -57,7 +57,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 
         //cmd
         TextView cmd = (TextView) findViewById(R.id.cmdString);
-        cmd.setText("A1" + ":" + room + ":" + equipment);
+        cmd.setText("A1" + ":" + room + ":" + equipment + " connected to: " + globals.getIP());
 
         tcpThread = new Thread(new ClientThread());
         tcpThread.start();
@@ -121,6 +121,7 @@ public class MainActivity extends Activity implements SensorEventListener {
                 //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
                 vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "1" + "\n"); //Mobile tilt up
+                mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
                 //System.out.print("Mobile tilt strait up");
                 //dataOutputStream.writeUTF("X value is " + X);
                 //client.disconnect();
@@ -133,7 +134,7 @@ public class MainActivity extends Activity implements SensorEventListener {
             if ((zvalue <= 7.1 && zvalue >= 6.5) && (yvalue <= -6.5 && yvalue >= -7.1)) {
                 vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "2" + "\n"); //Mobile tilt down
-
+                mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -144,6 +145,7 @@ public class MainActivity extends Activity implements SensorEventListener {
                 //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
                 vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "3" + "\n"); //Mobile tilt left
+                mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
             }
             //System.out.print("Mobile tilt left");
         } catch (IOException e) {
@@ -155,6 +157,7 @@ public class MainActivity extends Activity implements SensorEventListener {
                 //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
                 vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "4" + "\n"); //Mobile tilt right
+                mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
             }
             //System.out.print("Mobile tilt right");
         } catch (IOException e) {
@@ -166,6 +169,7 @@ public class MainActivity extends Activity implements SensorEventListener {
                 //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
                 vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "5" + "\n"); //Mobile tilt left vertically
+                mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
             }
             //System.out.print("Mobile tilt right");
         } catch (IOException e) {
@@ -177,6 +181,7 @@ public class MainActivity extends Activity implements SensorEventListener {
                 //dataOutputStream.writeUTF("A:" + X + " " + Y + " " + Z + "#" + "\n");
                 vibrator.vibrate(100);
                 dataOutputStream.writeUTF("A" + ":" + room + ":" + equipment + ":" + "6" + "\n"); //Mobile tilt right vertically
+                mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
             }
             //System.out.print("Mobile tilt right");
         } catch (IOException e) {
@@ -215,8 +220,10 @@ public class MainActivity extends Activity implements SensorEventListener {
 
         try {
             //socket = new Socket("194.47.32.65", 4444);   // my IP
-            socket = new Socket("194.47.41.122", 4444);   // Marijana
+            //socket = new Socket("194.47.40.99", 4444);   // Marijana
+            //socket = new Socket("194.47.40.107", 4444);   // Christian
             //socket = new Socket("194.47.40.69", 4444);     // pearsons IP
+            socket = new Socket(globals.getIP(),4444);
 
             dataOutputStream = new DataOutputStream(socket.getOutputStream());
             dataInputStream = new DataInputStream(socket.getInputStream());

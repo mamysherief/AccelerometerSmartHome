@@ -19,8 +19,7 @@
         <activity
             android:name="edu.washington.echee.accelerometerexample.MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,11 +44,13 @@
             android:label="@string/title_activity_rooms"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name="edu.washington.echee.accelerometerexample.Equipment"
@@ -61,6 +62,17 @@
             android:label="@string/title_activity_ceiling_lamp"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="edu.washington.echee.accelerometerexample.Intro"
+            android:label="@string/title_activity_intro"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

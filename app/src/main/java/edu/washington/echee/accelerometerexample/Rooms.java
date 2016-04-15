@@ -37,6 +37,7 @@ public class Rooms extends AppCompatActivity {
     /** Called when the user clicks Room 01 button */
     public void equipmentLauncher01(View view){
         globals.setRoom("R1");
+        globals.setIP("194.47.40.99");
         Intent equipmentIntent = new Intent(this, Equipment.class);
         startActivity(equipmentIntent);
         // pass a variable here
@@ -45,6 +46,7 @@ public class Rooms extends AppCompatActivity {
 /** Called when the user clicks Room 02 button */
     public void equipmentLauncher02(View view){
         globals.setRoom("R2");
+        globals.setIP("194.47.46.233");
         Intent equipmentIntent = new Intent(this, Equipment.class);
         startActivity(equipmentIntent);
         // pass a variable here
@@ -52,6 +54,7 @@ public class Rooms extends AppCompatActivity {
 /** Called when the user clicks Room 03 button */
     public void equipmentLauncher03(View view){
         globals.setRoom("R3");
+        globals.setIP("194.47.41.99");
         Intent equipmentIntent = new Intent(this, Equipment.class);
         startActivity(equipmentIntent);
         // pass a variable here

@@ -11,7 +11,7 @@ package edu.washington.echee.accelerometerexample;
 
 public class gcshGlobal {
     private static gcshGlobal instance;
-    private static String room, equipment;
+    private static String room, equipment, ip;
     //To stop calling from other classes
     private gcshGlobal(){}
 
@@ -29,6 +29,14 @@ public class gcshGlobal {
 
     public String getEquipment(){
         return gcshGlobal.equipment;
+    }
+
+    public void setIP(String ip){
+        gcshGlobal.ip = ip;
+    }
+
+    public String getIP(){
+        return gcshGlobal.ip;
     }
 
     public static synchronized gcshGlobal getInstance(){

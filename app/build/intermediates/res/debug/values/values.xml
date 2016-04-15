@@ -348,6 +348,7 @@
     <eat-comment/>
     <string name="title_activity_ceiling_lamp">CeilingLamp</string>
     <string name="title_activity_equipment">Equipment</string>
+    <string name="title_activity_intro">Intro</string>
     <string name="title_activity_rooms">Rooms</string>
     <string name="x_axis">x-axis: %f</string>
     <string name="y_axis">y-axis: %f</string>
